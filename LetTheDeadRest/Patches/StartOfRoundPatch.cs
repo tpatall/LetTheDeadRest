@@ -31,7 +31,7 @@ namespace LetTheDeadRest.Patches
                     } 
                     else
                     {
-                        playerControllerB2.voicePlayerState.Volume = Plugin.instance.volumePercentage.Value;
+                        playerControllerB2.voicePlayerState.Volume = Plugin.instance.volumeMultiplier.Value;
                     }
                 }
             }

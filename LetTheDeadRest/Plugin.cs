@@ -16,7 +16,7 @@ namespace LetTheDeadRest
 
         public static Plugin instance;
 
-        public ConfigEntry<float> volumePercentage;
+        public ConfigEntry<float> volumeMultiplier;
 
         void Awake()
         {
@@ -37,9 +37,9 @@ namespace LetTheDeadRest
         {
             LethalConfigManager.SetModDescription(PluginInfo.PLUGIN_NAME);
 
-            volumePercentage = ((BaseUnityPlugin)instance).Config.Bind(
+            volumeMultiplier = ((BaseUnityPlugin)instance).Config.Bind(
                 "LetTheDeadRest",
-                "Volume Percentage",
+                "Volume Multiplier",
                 0.2f,
                 "How loud alive players are compared to your fellow dead players. From 0.0 to 1.0."
             );
@@ -49,10 +49,10 @@ namespace LetTheDeadRest
                 Min = 0f,
                 Max = 1f
             };
-            FloatSliderConfigItem configItem = new FloatSliderConfigItem(volumePercentage, volumePercentageSlider);
+            FloatSliderConfigItem configItem = new FloatSliderConfigItem(volumeMultiplier, volumePercentageSlider);
             LethalConfigManager.AddConfigItem(configItem);
 
-            volumePercentage.SettingChanged += delegate
+            volumeMultiplier.SettingChanged += delegate
             {
                 StartOfRound.Instance.UpdatePlayerVoiceEffects();
             };
