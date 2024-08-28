@@ -13,11 +13,5 @@ You can also find the setting in the config file: `dummy.LetTheDeadRest.cfg`
 - **Volume Multiplier** (default = 0.2)
 	- How loud alive players are compared to your fellow dead players. From 0.0 to 1.0.
 
-## Changelog
-(Forgot to capitalize the word 'changelog' when uploading the CHANGELOG.md so... it won't show up on the Thunderstore page) 
-
-### Version 1.0.1
-- Updated for v50
-
 ## Credits
 Thanks for the preconfigured BepInEx and LethalConfig (see dependencies)!
